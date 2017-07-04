@@ -9,8 +9,12 @@ body {
     max-width: 630px;
     min-width: 330px;
     margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 
 .navigation li {
@@ -19,15 +23,12 @@ body {
     text-transform: uppercase;
     font: 600 20px "Open Sans", sans-serif;
 }
-
-.menuTaggle {
-    cursor: pointer;
-    padding: 10px 15px;
-    display: none;
+.navigation a:hover{
+    text-shadow: -1px 0 #9f9e9e, 0 1px #9f9e9e,
+      1px 0 #9f9e9e, 0 -1px #9f9e9e;
 }
 
-a {
-    text-decoration: none;
+nav a {
     color: #333;
 }
 
@@ -50,25 +51,39 @@ a {
 }
 
 header {
-    box-shadow: inset 0 3px 0 rgba(0, 0, 0, 0.11);
+    -webkit-box-shadow: inset 0 16px 47px -38px #000;
+            box-shadow: inset 0 16px 47px -38px #000;
     text-align: center;
-    padding: 100px 0 175px 0;
+    padding: 90px 0 190px 0;
     background: #FBFAFA;
 }
 
-header p {
+header h1 {
     font: 300 56px "Open Sans", sans-serif;
+    margin-bottom: 100px;
+    letter-spacing: -2px;
 }
 
 header a {
+    letter-spacing: -0.9px;
     background: #386680;
-    padding: 10px;
+    padding: 19px 35px;
     color: #fff;
     border-radius: 5px;
     font: 600 20px "Open Sans", sans-serif;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+header a:hover {
+    box-shadow: 2px 2px white, 4px 4px #386680;
+    top: -4px;
+    left: -4px;
 }
 
 .HotDogInfo {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
@@ -79,18 +94,27 @@ header a {
 
 .info {
     width: 720px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: column;
-    justify-content: center;
-    align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
 }
 
-.info p {
+.info p, .info h2 {
     max-width: 453px;
     margin: 3% 20%;
 }
 
-.info .title {
+.info h2 {
     position: relative;
     font: bold 24px "Open Sans", sans-serif;
     text-transform: capitalize;
@@ -103,19 +127,25 @@ header a {
     left: -35px;
 }
 
-.info p:nth-of-type(2) {
+.info p {
     font: 300 18px "Open Sans", sans-serif;
 }
 
 footer {
     background: #efefef;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     padding: 10px 20px;
     font: 14px "Open Sans", sans-serif;
 }
 
 footer .contact {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
